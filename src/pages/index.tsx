@@ -1,78 +1,80 @@
-import Image from "next/image";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Nunito } from "next/font/google";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const nunito = Nunito({
+  variable: "--font-nunito",
   subsets: ["latin"],
+  weight: ["400", "600", "700"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+// Removed Geist_Mono
 
-export default function Home() {
+export default function LovePage() {
   return (
     <div
-      className={`${geistSans.className} ${geistMono.className} flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black`}
+      className={`${nunito.variable} min-h-screen flex flex-col items-center p-6 pt-20`}
+      style={{ backgroundColor: "#AAB7F2", fontFamily: "Momo Signature, cursive" }}
     >
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the index.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+      <div className="text-center mb-10">
+        <h1
+          className="text-4xl font-bold mb-4 animate-bounce"
+          style={{ color: "#6B75C7" }}
+        >
+          💖 Những Điều Chúng Ta Đã Hứa 💖
+        </h1>
+        <p className="text-lg max-w-xl mx-auto" style={{ color: "#5A63AF" }}>
+          Một trang nhỏ xinh để nhắc lại những điều dễ thương mà hai đứa mình đã
+          dành cho nhau. Cảm ơn em vì đã bước vào cuộc đời anh. 💞
+        </p>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-4xl">
+        {/* Anh đã hứa */}
+        <div
+          className="shadow-xl rounded-2xl p-6"
+          style={{ backgroundColor: "#ffffffaa", border: "1px solid #8E9CF2" }}
+        >
+          <h2 className="text-2xl font-bold mb-4 text-center" style={{ color: "#6B75C7" }}>
+            Anh đã hứa 💙
+          </h2>
+          <ul className="space-y-3" style={{ color: "#4E5697" }}>
+            <li>1. Xây dựng sự tin tưởng chắc chắn với em</li>
+            <li>2. Không làm em thất vọng</li>
+            <li>3. Yêu em hết lòng hết dạ</li>
+            <li>4. Luôn giải quyết khúc mắc theo hướng mục tiêu chung</li>
+            <li>5. Luôn có mặt bất cứ lúc nào em cần</li>
+            <li>6. Lúc nào cũng tôn trọng em</li>
+            <li>7. Xây dựng sự tin tưởng chắc chắn với em (vì nó quan trọng lắm 💗)</li>
+          </ul>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs/pages/getting-started?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+        {/* Em đã hứa */}
+        <div
+          className="shadow-xl rounded-2xl p-6"
+          style={{ backgroundColor: "#ffffffaa", border: "1px solid #8E9CF2" }}
+        >
+          <h2 className="text-2xl font-bold mb-4 text-center" style={{ color: "#6B75C7" }}>
+            Em đã hứa 💗
+          </h2>
+          <ul className="space-y-3" style={{ color: "#4E5697" }}>
+            <li>1. Em yêu anh như anh yêu em</li>
+            <li>2. Không làm anh thất vọng</li>
+            <li>3. Anh sẽ không hối hận vì ngày hôm nay đã tỏ tình với em</li>
+            <li>4. Có khúc mắc thì gặp trực tiếp hoặc gọi điện để giải quyết, không được im lặng</li>
+            <li>5. Em mong anh không phải gượng ép thay đổi để trở thành người em muốn</li>
+            <li>6. Nếu em có sai thì anh luôn bao dung và xuống nước</li>
+            <li>7. Trust 💞</li>
+          </ul>
         </div>
-      </main>
+      </div>
+
+      <div className="mt-10 text-center">
+        <p className="text-xl" style={{ color: "#6B75C7" }}>
+          Cảm ơn vì chúng ta đã tìm thấy nhau 💐
+        </p>
+        <p className="mt-2 italic" style={{ color: "#4E5697" }}>
+          Anh yêu em rất nhiều 💘
+        </p>
+      </div>
     </div>
   );
 }
